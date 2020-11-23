@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.avatar {
+  /* margin: 10px; */
+  flex: 0.2;
+}
+
+.message {
+  flex: 0.8;
+}
