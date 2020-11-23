@@ -13,6 +13,7 @@ function App() {
         <div className="app-content">
           <Route path="/feed" component={Feed} />
           <Route path="/messages" component={Messages} />
+          <Route path="/lists" component={Lists} />
         </div>
         {/* <Feed /> */}
 
