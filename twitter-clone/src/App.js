@@ -1,15 +1,15 @@
 import "./App.css";
-import Widgets from "./components/widgets/Widgets";
-import Sidebar from "./components/sidebar/Sidebar";
-import Feed from "./components/feed/Feed";
+import Widgets from "./components/widgets/widgets";
+import Sidebar from "./components/sidebar/sidebar";
+import Feed from "./components/feed/feed";
 import Messages from "./components/messages/messages";
-import Lists from "./components/lists/Lists";
-import Explore from "./components/explore/Explore";
-import Bookmarks from "./components/bookmarks/Bookmarks";
+import Lists from "./components/lists/lists";
+import Explore from "./components/explore/explore";
+import Bookmarks from "./components/bookmarks/bookmarks";
 
 import { BrowserRouter, Route } from "react-router-dom";
-import Notification from "./components/notification/Notification";
-import Profile from "./components/profile/Profile";
+import Notification from "./components/notification/notification";
+import Profile from "./components/profile/profile";
 
 function App() {
   return (

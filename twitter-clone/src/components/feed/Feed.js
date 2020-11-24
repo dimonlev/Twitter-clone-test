@@ -1,8 +1,8 @@
 import React from "react";
-import F from "./Feed.module.css";
-import TestFeed from "../TestFeed";
-import TweetBox from "../tweetbox/TweetBox";
-import Tweet from "../tweet/Tweet";
+import F from "./feed.module.css";
+import TestFeed from "../testFeed";
+import TweetBox from "../tweetbox/tweetBox";
+import Tweet from "../tweet/tweet";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 function Feed() {
