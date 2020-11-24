@@ -1,9 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import sOption from "./SidebarOption.module.css";
 
 function SidebarOption({ active, text, Icon, option }) {
   return (
-    <a href={option} className={sOption}>
+    <NavLink to={option} className={sOption} activeClassName={sOption}>
       <div
         className={`${sOption.sidebarOption} ${
           active && sOption.sidebarOptionActive
@@ -12,7 +13,7 @@ function SidebarOption({ active, text, Icon, option }) {
         <Icon />
         <h2>{text}</h2>
       </div>
-    </a>
+    </NavLink>
   );
 }
 
