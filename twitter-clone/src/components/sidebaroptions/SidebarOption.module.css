@@ -1,18 +1,25 @@
-.sidebarOption {
-  display: flex;
+.wrapper {
+  /* display: flex; */
   align-items: center;
   cursor: pointer;
 }
 
-a {
+.option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.wrapper a {
   text-decoration: none;
 }
 
-a:visited {
+.wrapper a:visited {
   color: black;
 }
 
-.sidebarOption:hover {
+.option:hover {
   background-color: #e8f5fe;
   border-radius: 30px;
   color: var(--twitter-color);
@@ -29,6 +36,12 @@ h2 {
   margin-left: 20px;
 }
 
-.sidebarOptionActive {
+.wrapper a.activeLink {
   color: var(--twitter-color);
 }
+
+/* a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} */

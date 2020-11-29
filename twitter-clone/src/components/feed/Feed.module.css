@@ -2,10 +2,14 @@
   display: none;
 }
 
+.wrapper {
+  flex: 0.7;
+}
+
 .feed {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  flex: 0.4;
+  flex: 0.6;
   border-right: 1px solid var(--twitter-background) !important;
   min-width: fit-content;
   overflow-y: scroll;
@@ -25,4 +29,8 @@
 .header > h2 {
   font-size: 20px;
   font-weight: 800;
+}
+
+.widgets {
+  flex: 0.4;
 }

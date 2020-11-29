@@ -1,5 +1,5 @@
 import "./App.css";
-import Widgets from "./components/widgets/widgets";
+
 import Sidebar from "./components/sidebar/sidebar";
 import Feed from "./components/feed/feed";
 import Messages from "./components/messages/messages";
@@ -10,6 +10,7 @@ import Bookmarks from "./components/bookmarks/bookmarks";
 import { BrowserRouter, Route } from "react-router-dom";
 import Notification from "./components/notification/notification";
 import Profile from "./components/profile/profile";
+import { More } from "@material-ui/icons";
 
 function App() {
   return (
@@ -24,11 +25,12 @@ function App() {
           <Route path="/lists" component={Lists} />
           <Route path="/notification" component={Notification} />
           <Route path="/profile" component={Profile} />
+          <Route path="/more" component={More} />
          
         </div>
         {/* <Feed /> */}
 
-        <Widgets />
+      
       </div>
     </BrowserRouter>
   );
