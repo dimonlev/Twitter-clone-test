@@ -26,11 +26,8 @@ function App() {
           <Route path="/notification" component={Notification} />
           <Route path="/profile" component={Profile} />
           <Route path="/more" component={More} />
-         
         </div>
         {/* <Feed /> */}
-
-      
       </div>
     </BrowserRouter>
   );

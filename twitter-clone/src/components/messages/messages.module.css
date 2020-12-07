@@ -1,1 +1,53 @@
+.wrapper {
+  display: flex;
+  background-color: aqua;
+}
 
+.dialogs {
+  border-right: 1px solid var(--twitter-background) !important;
+  flex: 0.4;
+  background-color: burlywood;
+  height: 100%;
+}
+
+.dialog a {
+  text-decoration: none;
+}
+
+.dialog a:visited {
+  color: black;
+}
+
+.dialog:hover {
+  background-color: var(--twitter-background);
+  cursor: pointer;
+}
+
+.messages {
+  flex: 0.6;
+  background-color: coral;
+  height: 100%;
+}
+
+.message {
+  margin: 10px;
+}
+
+.dialog {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.avatar {
+  margin: 10px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.nameWpapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -7,7 +7,7 @@ function Tweet(props) {
     <div className={T.container}>
       <div className={T.avatar}>
         <Avatar
-          src="https://pbs.twimg.com/profile_images/3568162909/c50fc66e4995a4c1ec4430d596714caf_bigger.jpeg"
+          src="https://pbs.twimg.com/profile_images/1330600966287204354/IXMx_SAk_400x400.jpg"
           alt="avatar"
         />
       </div>
