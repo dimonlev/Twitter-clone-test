@@ -18,7 +18,7 @@ function App(props) {
       <div className="app">
         <Sidebar />
         <div className="app-content">
-          <Route path="/feed" render={() => <Feed /> } />
+          <Route path="/feed" render={() => <Feed  posts={props.posts}/> } />
           <Route path="/explore" render={() => <Explore /> } />
           <Route path="/messages" render={() => <Messages  dialog={props.dialog} message={props.message} /> } />
           <Route path="/bookmarks" render={() => <Bookmarks /> } />

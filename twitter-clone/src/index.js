@@ -40,9 +40,26 @@ let message = [
   { id: 6, text: "How are you?", date: 2020 },
 ];
 
+let posts = [
+  {id:1, text: "It's my first post"},
+  {id:2, text: "It's my second post"},
+  {id:3, text: "It's my third post"},
+  {id:4, text: "It's my fourth post"},
+  {id:5, text: "It's my fifth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App dialog={dialog} message={message} />
+    <App dialog={dialog} message={message} posts={posts} />
   </React.StrictMode>,
   document.getElementById('root')
 );
