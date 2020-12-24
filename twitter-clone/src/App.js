@@ -10,22 +10,22 @@ import Bookmarks from "./components/bookmarks/bookmarks";
 import { BrowserRouter, Route } from "react-router-dom";
 import Notification from "./components/notification/notification";
 import Profile from "./components/profile/profile";
-import { More } from "@material-ui/icons";
+import More from "./components/More/More";
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app">
         <Sidebar />
         <div className="app-content">
-          <Route path="/feed" component={Feed} />
-          <Route path="/explore" component={Explore} />
-          <Route path="/messages" component={Messages} />
-          <Route path="/bookmarks" component={Bookmarks} />
-          <Route path="/lists" component={Lists} />
-          <Route path="/notification" component={Notification} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/more" component={More} />
+          <Route path="/feed" render={() => <Feed /> } />
+          <Route path="/explore" render={() => <Explore /> } />
+          <Route path="/messages" render={() => <Messages  dialog={props.dialog} message={props.message} /> } />
+          <Route path="/bookmarks" render={() => <Bookmarks /> } />
+          <Route path="/lists" render={() => <Lists /> } />
+          <Route path="/notification" render={() => <Notification /> } />
+          <Route path="/profile" render={() => <Profile /> } />
+          <Route path="/more" render={() => <More /> } />
         </div>
         {/* <Feed /> */}
       </div>

@@ -14,21 +14,23 @@ import { Button } from "@material-ui/core";
 
 const Sidebar = (props) => {
   return (
-    <div className={S.sidebar}>
-      <TwitterIcon className={S.twitterIcon} fontSize="large" />
+    <div className={S.wrapper}>
+      <div className={S.sidebar}>
+        <TwitterIcon className={S.twitterIcon} fontSize="large" />
 
-      <SidebarOption Icon={HomeIcon} text="Home" option="/feed" />
-      <SidebarOption Icon={SearchIcon} text="Explore" option="/explore" />
-      <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" option="/notification" />
-      <SidebarOption Icon={MailOutlineIcon} text="Messages" option="/messages" />
-      <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" option="/bookmarks" />
-      <SidebarOption Icon={ListAltIcon} text="Lists" option="/lists" />
-      <SidebarOption Icon={PermIdentityIcon} text="Profile" option="/profile" />
-      <SidebarOption Icon={MoreHorizIcon} text="More" option="/more" />
+        <SidebarOption Icon={HomeIcon} text="Home" option="/feed" />
+        <SidebarOption Icon={SearchIcon} text="Explore" option="/explore" />
+        <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" option="/notification" />
+        <SidebarOption Icon={MailOutlineIcon} text="Messages" option="/messages" />
+        <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" option="/bookmarks" />
+        <SidebarOption Icon={ListAltIcon} text="Lists" option="/lists" />
+        <SidebarOption Icon={PermIdentityIcon} text="Profile" option="/profile" />
+        <SidebarOption Icon={MoreHorizIcon} text="More" option="/more" />
 
-      <Button variant="outlined" className={S.tweet} fullWidth>
-        Tweet
-      </Button>
+        <Button variant="outlined" className={S.tweet} fullWidth>
+          Tweet
+        </Button>
+      </div>
     </div>
   );
 };

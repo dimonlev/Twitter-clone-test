@@ -3,15 +3,18 @@
 }
 
 .wrapper {
-  flex: 0.7;
+  flex: 0.8;
+  
 
 }
 
 .gridWrapper{
   display: flex;
+
 }
 
 .feed {
+  flex: 0.7;
   -ms-overflow-style: none;
   scrollbar-width: none;
   
@@ -21,14 +24,15 @@
 }
 
 .header {
+  
   display: flex;
   justify-content: space-between;
   position: sticky;
-  top: 0;
+  /* top: 0; */
   background-color: white;
-  z-index: 100;
+  z-index: 90;
   border-bottom: 1px solid var(--twitter-background) !important;
-  padding: 15px 20px;
+  /* padding: 15px 20px; */
 }
 
 .header > h2 {
@@ -37,5 +41,5 @@
 }
 
 .widgets {
-
+  flex: 0.3;
 }

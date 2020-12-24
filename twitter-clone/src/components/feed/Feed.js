@@ -11,7 +11,15 @@ let posts = [
   {id:3, text: "It's my third post"},
   {id:4, text: "It's my fourth post"},
   {id:5, text: "It's my fifth post"},
-  {id:6, text: "It's my sixth post"}
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
+  {id:6, text: "It's my sixth post"},
 ]
 
 let feed = posts.map ( post => <Tweet id={post.id} text={post.text} /> )
@@ -37,7 +45,6 @@ function Feed() {
           Widgets
         </div>
       </div>
-
     </div>
   );
 }
