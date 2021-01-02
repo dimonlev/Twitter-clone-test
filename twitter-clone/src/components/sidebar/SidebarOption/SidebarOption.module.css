@@ -25,6 +25,10 @@
   color: black;
 }
 
+.wrapper a:link {
+  color: black;
+}
+
 .option:hover {
   background-color: #e8f5fe;
   border-radius: 30px;

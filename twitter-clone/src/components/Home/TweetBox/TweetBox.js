@@ -1,16 +1,16 @@
 import { Avatar, Button } from '@material-ui/core'
 import React from 'react'
-import tBox from "./TweetBox.module.css"
+import S from "./TweetBox.module.css"
 
-function TweetBox() {
+function TweetBox(props) {
   return (
-    <div className={tBox.tweetBox}>
+    <div className={S.tweetBox}>
       <form>
-        <div className={tBox.input}>
+        <div className={S.input}>
           <Avatar src="https://pbs.twimg.com/profile_images/1330600966287204354/IXMx_SAk_400x400.jpg" alt="avatar" />
           <input type="text" placeholder="What's happening?" />
         </div>
-        <Button className={tBox.tweetButton}>Tweet</Button>
+        <Button className={S.tweetButton}>Tweet</Button>
 
       </form>
 

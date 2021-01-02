@@ -1,15 +1,35 @@
 .container {
   display: flex;
-
-  margin: 20px;
-  justify-content: space-between;
+  margin: 15px;
 }
 
 .avatar {
-  /* margin: 10px; */
-  flex: 0.2;
+ margin-right: 15px; 
 }
 
-.message {
-  flex: 0.8;
+.header {
+  display: flex;
+}
+
+.userName {
+  font-weight: 700;
+}
+
+.verified {
+  color: var(--twitter-color);
+  
+}
+
+.nickName {
+  color: gray;
+}
+
+.image img{
+  max-width: 500px;
+  border-radius: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
 }

@@ -27,7 +27,7 @@
   
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: sticky !important;
   /* top: 0; */
   background-color: white;
   z-index: 90;

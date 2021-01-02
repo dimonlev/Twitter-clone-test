@@ -6,7 +6,14 @@ import Tweet from "../Tweet/Tweet";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 const Home = (props) => {
-  let feedBox = props.homePage.posts.map( post => <Tweet id={post.id} text={post.text} /> )
+  let feedBox = props.homePage.posts.map( post => 
+  <Tweet 
+    id={post.id} 
+    text={post.text} 
+    userName={post.userName} 
+    nickName={post.nickName}
+    verified={post.verified}
+  />) 
   return (
     <div className={F.wrapper}>
       <div className={F.gridWrapper}>
