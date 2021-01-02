@@ -1,11 +1,11 @@
 import React from "react";
-import S from "./messages.module.css";
+import S from "./Messages.module.css";
 import Dialog from './Dialog';
 import Message from './Message';
 
 const Messages = (props) => {
-  let newDialogData = props.dialog.map( dialog => <Dialog name={dialog.name} nickName={dialog.nickName} id={dialog.id} />);
-  let newMessageData = props.message.map ( message => <Message text={message.text} id={message.id} date={message.date} />)
+  let newDialogData = props.messagePage.dialog.map( dialog => <Dialog name={dialog.name} nickName={dialog.nickName} id={dialog.id} />);
+  let newMessageData = props.messagePage.message.map ( message => <Message text={message.text} id={message.id} date={message.date} />)
 
   return (
     <div className={S.wrapper}>

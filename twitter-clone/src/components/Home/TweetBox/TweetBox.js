@@ -1,6 +1,6 @@
 import { Avatar, Button } from '@material-ui/core'
 import React from 'react'
-import tBox from "./tweetBox.module.css"
+import tBox from "./TweetBox.module.css"
 
 function TweetBox() {
   return (

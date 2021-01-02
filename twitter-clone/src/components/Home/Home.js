@@ -1,12 +1,12 @@
 import React from "react";
-import F from "./feed.module.css";
-import TestFeed from "../testFeed";
-import TweetBox from "../tweetbox/tweetBox";
-import Tweet from "../tweet/tweet";
+import F from "./Home.module.css";
+import TestFeed from "../TestFeed";
+import TweetBox from "./TweetBox/TweetBox";
+import Tweet from "../Tweet/Tweet";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 
-const Feed = (props) => {
-  let feedBox = props.posts.map( post => <Tweet id={post.id} text={post.text} /> )
+const Home = (props) => {
+  let feedBox = props.homePage.posts.map( post => <Tweet id={post.id} text={post.text} /> )
   return (
     <div className={F.wrapper}>
       <div className={F.gridWrapper}>
@@ -31,4 +31,4 @@ const Feed = (props) => {
   );
 }
 
-export default Feed;
+export default Home;

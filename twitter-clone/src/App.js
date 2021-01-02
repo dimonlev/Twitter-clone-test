@@ -1,26 +1,25 @@
 import "./App.css";
-
-import Sidebar from "./components/sidebar/sidebar";
-import Feed from "./components/feed/feed";
-import Messages from "./components/messages/messages";
-import Lists from "./components/lists/lists";
-import Explore from "./components/explore/explore";
-import Bookmarks from "./components/bookmarks/bookmarks";
-
+import Sidebar from "./components/sidebar/Sidebar";
+import Home from "./components/Home/Home";
+import Messages from "./components/Messages/Messages";
+import Lists from "./components/Lists/Lists";
+import Explore from "./components/Explore/Explore";
+import Bookmarks from "./components/Bookmarks/Bookmarks";
 import { BrowserRouter, Route } from "react-router-dom";
-import Notification from "./components/notification/notification";
-import Profile from "./components/profile/profile";
+import Notification from "./components/Notification/Notification";
+import Profile from "./components/Profile/Profile";
 import More from "./components/More/More";
 
 function App(props) {
-  return (
+  
+    return (
     <BrowserRouter>
       <div className="app">
         <Sidebar />
         <div className="app-content">
-          <Route path="/feed" render={() => <Feed  posts={props.posts}/> } />
+          <Route path="/home" render={() => <Home  homePage={props.state.homePage}/> } />
           <Route path="/explore" render={() => <Explore /> } />
-          <Route path="/messages" render={() => <Messages  dialog={props.dialog} message={props.message} /> } />
+          <Route path="/messages" render={() => <Messages  messagePage={props.state.messagePage} /> } />
           <Route path="/bookmarks" render={() => <Bookmarks /> } />
           <Route path="/lists" render={() => <Lists /> } />
           <Route path="/notification" render={() => <Notification /> } />

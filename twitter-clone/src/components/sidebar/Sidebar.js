@@ -1,7 +1,7 @@
 import React from "react";
-import S from "./sidebar.module.css";
+import S from "./Sidebar.module.css";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import SidebarOption from "../sidebaroptions/sidebarOption";
+import SidebarOption from "./SidebarOption/SidebarOption";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
@@ -18,7 +18,7 @@ const Sidebar = (props) => {
       <div className={S.sidebar}>
         <TwitterIcon className={S.twitterIcon} fontSize="large" />
 
-        <SidebarOption Icon={HomeIcon} text="Home" option="/feed" />
+        <SidebarOption Icon={HomeIcon} text="Home" option="/home" />
         <SidebarOption Icon={SearchIcon} text="Explore" option="/explore" />
         <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" option="/notification" />
         <SidebarOption Icon={MailOutlineIcon} text="Messages" option="/messages" />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import T from "./tweet.module.css";
+import T from "./Tweet.module.css";
 
 function Tweet(props) {
   return (
