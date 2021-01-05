@@ -26,7 +26,8 @@ function Tweet(
           alt="avatar"
         />
       </div>
-        <div className={T.content}>
+
+      <div className={T.content}>
         <div className={T.header}>
         
           <div className={T.userName}>
@@ -43,31 +44,35 @@ function Tweet(
           
         </div>
 
-      <div className={T.message}>
-        {props.text}
-      </div>
+        <div className={T.message}>
+          {props.text}
+        </div>
 
-      <div className={T.image}>
-        <img src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1374145/245e9eaedc3ce28a4be97be3a36e05e9/960x540" alt="first img" />
-      </div>
+        <div className={T.image}>
+          <img src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1374145/245e9eaedc3ce28a4be97be3a36e05e9/960x540" alt="first img" />
+        </div>
 
-      <div className={T.footer}>
-        <div className={T.comment}>
-          <ChatBubbleOutlineIcon />
+        <div className={T.footer}>
+          <div className={T.comment}>
+            <ChatBubbleOutlineIcon />
+          </div>
+
+          <div className={T.retweet}>
+            <RepeatIcon />
+          </div>
+
+          <div className={T.like}>
+            <FavoriteBorderIcon />
+          </div>
+
+          <div className={T.share}>
+            <PublishIcon />
+          </div>
+
         </div>
-        <div className={T.retweet}>
-          <RepeatIcon />
-        </div>
-        <div className={T.like}>
-          <FavoriteBorderIcon />
-        </div>
-        <div className={T.share}>
-          <PublishIcon />
-        </div>
+
+      </div>
       
-
-        </div>
-      </div>
     </div>
   );
 }

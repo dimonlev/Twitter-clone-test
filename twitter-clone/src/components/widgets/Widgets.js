@@ -1,5 +1,5 @@
 import React from 'react';
-import W from './widgets.module.css'
+import W from './Widgets.module.css'
 
 
 const Widgets = () => {

@@ -1,3 +1,5 @@
+::-webkit-scrollbar {display:none;}
+
 body {
   --twitter-color: #50b7f5;
   --twitter-background: #d6dcf0;
@@ -5,20 +7,24 @@ body {
 
 .app {
   display: flex;
-  height: 100%;
+  height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
   border:  1px solid var(--twitter-background) !important;
 }
 
+.sidebar {
+  flex: 0.2;
+  position: sticky;
+}
+
 .app-content {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  flex: 0.7;
-  /* border-right: 1px solid var(--twitter-background) !important; */
+  flex: 0.8;
+  border-right: 1px solid var(--twitter-background) !important;
   min-width: fit-content;
   overflow-y: scroll;
+  
 }
-
-::-webkit-scrollbar {display:none;}

@@ -1,13 +1,29 @@
 .wrapper {
   display: flex;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .dialogs {
   border-right: 1px solid var(--twitter-background) !important;
   flex: 0.4;
-  background-color: burlywood;
-  height: 100%;
+  /* background-color: burlywood; */
+  height: 100vh;
+}
+
+.headerMessages {
+  position: sticky;
+  top: 0;
+ 
+  max-width: 100%;
+  display: flex;
+  border-bottom: 1px solid var(--twitter-background);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerMessages p{
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .dialog a {
@@ -25,8 +41,8 @@
 
 .messages {
   flex: 0.6;
-  background-color: coral;
-  height: 100%;
+  /* background-color: coral; */
+  height: 100vh;
 }
 
 .message {
@@ -39,7 +55,7 @@
 }
 
 .avatar {
-  margin: 10px;
+  margin: 14px;
 }
 
 .name {
@@ -48,6 +64,40 @@
 
 .nameWpapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.inputBox {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  align-items: center;
+}
+
+/* .input {
+  border-radius: 10px;
+  border-color: var(--twitter-color);
+} */
+
+.send {
+  color: var(--twitter-color);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.send:hover {
+  background-color: #e8f5fe;
+  border-radius: 25px;
+  color: var(--twitter-color);
+  transition: color 100ms ease-out;
+}
+
+.input {
+  /* flex: 1; */
+  margin: 20px;
+  font-size: 20px;
+  border-color: var(--twitter-color);
+  border-radius: 10px;
 }

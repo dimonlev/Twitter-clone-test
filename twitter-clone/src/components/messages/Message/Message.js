@@ -1,5 +1,5 @@
 import React from 'react'
-import S from './Messages.module.css'
+import S from '../Messages.module.css'
 
 const Message = (props) => {
   return (

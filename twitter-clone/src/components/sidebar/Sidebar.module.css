@@ -1,16 +1,18 @@
 .wrapper {
-  position: sticky !important;
   overflow-y: none;
   flex: 0.2;
   border-right: 1px solid var(--twitter-background) !important;
 }
 
+.sidebarContainer {
+  
+}
 
 .sidebar {
   position: sticky !important;
   overflow-y: none;
   min-width: 250px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-left: 20px;
   margin-right: 20px;
 }

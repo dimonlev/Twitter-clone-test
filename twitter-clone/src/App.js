@@ -11,20 +11,27 @@ import Profile from "./components/Profile/Profile";
 import More from "./components/More/More";
 
 function App(props) {
-  
-    return (
+
+  return (
     <BrowserRouter>
       <div className="app">
-        <Sidebar />
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+
         <div className="app-content">
-          <Route path="/home" render={() => <Home  homePage={props.state.homePage}/> } />
-          <Route path="/explore" render={() => <Explore /> } />
-          <Route path="/messages" render={() => <Messages  messagePage={props.state.messagePage} /> } />
-          <Route path="/bookmarks" render={() => <Bookmarks /> } />
-          <Route path="/lists" render={() => <Lists /> } />
-          <Route path="/notification" render={() => <Notification /> } />
-          <Route path="/profile" render={() => <Profile /> } />
-          <Route path="/more" render={() => <More /> } />
+          <Route path="/home" render={() => <Home
+            homePage={props.state.homePage}
+            addPost={props.addPost} />} />
+          <Route path="/explore" render={() => <Explore />} />
+          <Route path="/messages" render={() => <Messages
+            messagePage={props.state.messagePage}
+            addMessage={props.addMessage} />} />
+          <Route path="/bookmarks" render={() => <Bookmarks />} />
+          <Route path="/lists" render={() => <Lists />} />
+          <Route path="/notification" render={() => <Notification />} />
+          <Route path="/profile" render={() => <Profile />} />
+          <Route path="/more" render={() => <More />} />
         </div>
         {/* <Feed /> */}
       </div>
