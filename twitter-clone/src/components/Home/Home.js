@@ -30,7 +30,7 @@ const Home = (props) => {
         <TweetBox
           addPost={props.addPost}
           newChangePost={props.newChangePost}
-          tempText={props.homePage.tempText} />
+        />
         {feedBox}
         <TestFeed />
 

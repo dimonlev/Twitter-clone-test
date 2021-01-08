@@ -1,4 +1,6 @@
-import { rerenderEntireTree } from "../render"
+let rerenderEntireTree = () => {
+  console.log('state');
+}
 
 let state = {
   homePage: {
@@ -28,8 +30,9 @@ let state = {
       { id: 4, name: "Kolyan", nickName: "@omn1" },
       { id: 5, name: "Sasha", nickName: "@claster" },
       { id: 6, name: "Jenya", nickName: "@jenny" },
-
-    ]
+    ],
+    tempDialog: '',
+    tempMessage: ''
   }
 }
 
@@ -44,19 +47,29 @@ export let addPost = () => {
   rerenderEntireTree(state);
 }
 
-export let addMessage = (newMessage) => {
-  let newPost = {
-    id: 7, text: newMessage, date: 2020
-  }
-  state.messagePage.message.push(newPost);
-  rerenderEntireTree(state);
-}
-
 export let newChangePost = (changePost) => {
   state.homePage.tempText = changePost;
   rerenderEntireTree(state);
   console.log(state.homePage.tempText);
 
+}
+
+export let addMessage = () => {
+  let newPost = {
+    id: 7, text: state.messagePage.tempMessage, date: 2020
+  }
+  state.messagePage.message.push(newPost);
+  state.messagePage.tempMessage = "";
+  rerenderEntireTree(state);
+}
+
+export let newMessageOnChange = (newMessage) => {
+  state.messagePage.tempMessage = newMessage;
+  rerenderEntireTree(state);
+  console.log(state.messagePage.tempMessage);
+}
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
 }
 
 export default state

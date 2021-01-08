@@ -14,9 +14,12 @@ const Messages = (props) => {
   let newMessageElement = React.createRef();
 
   let newMessage = () => {
+    props.addMessage()
+  }
+
+  let addNewMesage = () => {
     let text = newMessageElement.current.value;
-    props.addMessage(text)
-    newMessageElement.current.value = "";
+    props.newMessageOnChange(text);
   }
 
   return (
@@ -46,7 +49,7 @@ const Messages = (props) => {
         </div>
         {newMessageData}
         <div className={S.inputBox}>
-          <input className={S.input} ref={newMessageElement}></input>
+          <input className={S.input} ref={newMessageElement} onChange={addNewMesage} ></input>
           <SendIcon className={S.send} onClick={newMessage} />
         </div>
       </div>

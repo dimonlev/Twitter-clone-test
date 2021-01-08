@@ -24,11 +24,14 @@ function App(props) {
           <Route path="/home" render={() => <Home
             newChangePost={props.newChangePost}
             homePage={props.state.homePage}
-            addPost={props.addPost} />} />
+            addPost={props.addPost}
+          />} />
           <Route path="/explore" render={() => <Explore />} />
           <Route path="/messages" render={() => <Messages
             messagePage={props.state.messagePage}
-            addMessage={props.addMessage} />} />
+            addMessage={props.addMessage}
+            newMessageOnChange={props.newMessageOnChange}
+          />} />
           <Route path="/bookmarks" render={() => <Bookmarks />} />
           <Route path="/lists" render={() => <Lists />} />
           <Route path="/notification" render={() => <Notification />} />
