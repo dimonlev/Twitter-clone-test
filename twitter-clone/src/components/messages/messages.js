@@ -14,9 +14,9 @@ const Messages = (props) => {
   let newMessageElement = React.createRef();
 
   let newMessage = () => {
-    debugger;
     let text = newMessageElement.current.value;
     props.addMessage(text)
+    newMessageElement.current.value = "";
   }
 
   return (

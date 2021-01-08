@@ -15,6 +15,8 @@ const Home = (props) => {
       nickName={post.nickName}
       verified={post.verified}
     />)
+
+
   return (
     <div className={F.wrapper}>
       {/* <div className={F.gridWrapper}> */}
@@ -25,7 +27,10 @@ const Home = (props) => {
           <StarBorderIcon />
         </div>
 
-        <TweetBox addPost={props.addPost} />
+        <TweetBox
+          addPost={props.addPost}
+          newChangePost={props.newChangePost}
+          tempText={props.homePage.tempText} />
         {feedBox}
         <TestFeed />
 

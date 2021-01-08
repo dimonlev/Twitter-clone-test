@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render"
+
 let state = {
   homePage: {
     posts: [
@@ -7,8 +9,8 @@ let state = {
       { id: 4, text: "It's my fourth post", userName: "Dima", nickName: "@dimonlev", verified: true },
       { id: 5, text: "It's my fifth post", userName: "Dima", nickName: "@dimonlev", verified: true },
       { id: 6, text: "It's my sixth post", userName: "Dima", nickName: "@dimonlev", verified: true },
-
-    ]
+    ],
+    tempText: ""
   },
   messagePage: {
     message: [
@@ -30,18 +32,31 @@ let state = {
     ]
   }
 }
-export let addPost = (newMessage) => {
-  let newPost = {
-    id: 7, text: newMessage, userName: "Dima", nickName: "@dimonlev", verified: true
-  }
-  state.homePage.posts.push(newPost)
 
+window.state = state;
+
+export let addPost = () => {
+  let newPost = {
+    id: 7, text: state.homePage.tempText, userName: "Dima", nickName: "@dimonlev", verified: true
+  }
+  state.homePage.posts.push(newPost);
+  state.homePage.tempText = '';
+  rerenderEntireTree(state);
 }
+
 export let addMessage = (newMessage) => {
-  debugger;
   let newPost = {
     id: 7, text: newMessage, date: 2020
   }
-  state.messagePage.message.push(newPost)
+  state.messagePage.message.push(newPost);
+  rerenderEntireTree(state);
 }
+
+export let newChangePost = (changePost) => {
+  state.homePage.tempText = changePost;
+  rerenderEntireTree(state);
+  console.log(state.homePage.tempText);
+
+}
+
 export default state

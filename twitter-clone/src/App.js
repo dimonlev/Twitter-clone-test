@@ -10,6 +10,7 @@ import Notification from "./components/Notification/Notification";
 import Profile from "./components/Profile/Profile";
 import More from "./components/More/More";
 
+
 function App(props) {
 
   return (
@@ -21,6 +22,7 @@ function App(props) {
 
         <div className="app-content">
           <Route path="/home" render={() => <Home
+            newChangePost={props.newChangePost}
             homePage={props.state.homePage}
             addPost={props.addPost} />} />
           <Route path="/explore" render={() => <Explore />} />
