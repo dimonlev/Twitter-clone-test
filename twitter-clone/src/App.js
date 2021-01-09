@@ -22,13 +22,13 @@ function App(props) {
 
         <div className="app-content">
           <Route path="/home" render={() => <Home
-            newChangePost={props.newChangePost}
             homePage={props.state.homePage}
             addPost={props.addPost}
+            newChangePost={props.newChangePost}
           />} />
           <Route path="/explore" render={() => <Explore />} />
           <Route path="/messages" render={() => <Messages
-            messagePage={props.state.messagePage}
+            messagePage={props.messagePage}
             addMessage={props.addMessage}
             newMessageOnChange={props.newMessageOnChange}
           />} />

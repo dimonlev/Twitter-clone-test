@@ -7,6 +7,7 @@ import StarBorderIcon from "@material-ui/icons/StarBorder";
 import Widgets from "../Widgets/Widgets";
 
 const Home = (props) => {
+
   let feedBox = props.homePage.posts.map(post =>
     <Tweet
       id={post.id}
