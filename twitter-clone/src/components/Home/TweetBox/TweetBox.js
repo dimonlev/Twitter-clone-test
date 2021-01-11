@@ -25,8 +25,7 @@ function TweetBox(props) {
             placeholder="What's happening?"
             ref={newPostValue}
             onChange={onPostChange}
-            value={props.tempText}
-
+            value={props.homePage.tempText}
           />
         </div>
         <Button className={S.tweetButton} onClick={addPost}>Tweet</Button>

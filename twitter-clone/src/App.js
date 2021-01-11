@@ -28,7 +28,7 @@ function App(props) {
           />} />
           <Route path="/explore" render={() => <Explore />} />
           <Route path="/messages" render={() => <Messages
-            messagePage={props.messagePage}
+            messagePage={props.state.messagePage}
             addMessage={props.addMessage}
             newMessageOnChange={props.newMessageOnChange}
           />} />

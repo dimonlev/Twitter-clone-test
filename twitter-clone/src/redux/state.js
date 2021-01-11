@@ -106,9 +106,17 @@ export let store = {
       tempMessage: ''
     }
   },
+  _callSubscriber() {
+    console.log('state');
+  },
+
   getState() {
     return this._state
   },
+  subscribe(observer) {
+    this._callSubscriber = observer;
+  },
+
   addPost() {
     let newPost = {
       id: 7, text: this._state.homePage.tempText, userName: "Dima", nickName: "@dimonlev", verified: true
@@ -122,23 +130,28 @@ export let store = {
     this._callSubscriber(this._state);
   },
   addMessage() {
+
     let newPost = {
+
       id: 7, text: this._state.messagePage.tempMessage, date: 2020
     }
-    this._state.addMessagemessage.push(newPost);
-    this._state.messagePage.tempMessage = "";
+    this._state.messagePage.message.push(newPost);
+    this._state.messagePage.tempMessage = '';
     this._callSubscriber(this._state);
   },
   newMessageOnChange(newMessage) {
     this._state.messagePage.tempMessage = newMessage;
     this._callSubscriber(this._state);
   },
-  _callSubscriber() {
-    console.log('state');
-  },
-  subscribe(observer) {
-    this._callSubscriber = observer;
-  }
+  // dispatch(action) {
+  //   switch (action) {
+  //     case 'ADD-MESSAGE': this.addMessage();
+  //       break;
+  //     default: console.log("add object");
+
+
+  //   }
+  // }
 }
 
 export default store

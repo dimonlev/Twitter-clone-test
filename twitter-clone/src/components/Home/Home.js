@@ -17,7 +17,6 @@ const Home = (props) => {
       verified={post.verified}
     />)
 
-
   return (
     <div className={F.wrapper}>
       {/* <div className={F.gridWrapper}> */}
@@ -31,6 +30,7 @@ const Home = (props) => {
         <TweetBox
           addPost={props.addPost}
           newChangePost={props.newChangePost}
+          homePage={props.homePage}
         />
         {feedBox}
         <TestFeed />

@@ -49,7 +49,7 @@ const Messages = (props) => {
         </div>
         {newMessageData}
         <div className={S.inputBox}>
-          <input className={S.input} ref={newMessageElement} onChange={addNewMesage} ></input>
+          <input className={S.input} ref={newMessageElement} onChange={addNewMesage} value={props.messagePage.tempMessage} ></input>
           <SendIcon className={S.send} onClick={newMessage} />
         </div>
       </div>
