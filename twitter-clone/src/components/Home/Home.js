@@ -31,6 +31,7 @@ const Home = (props) => {
           addPost={props.addPost}
           newChangePost={props.newChangePost}
           homePage={props.homePage}
+          dispatch={props.dispatch}
         />
         {feedBox}
         <TestFeed />

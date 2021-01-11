@@ -71,6 +71,12 @@
 // export const subscribe = (observer) => {
 //   rerenderEntireTree = observer;
 // }
+const ADD_POST = 'ADD-POST';
+const NEW_CHANGE_POST = 'NEW-CHANGE-POST';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const NEW_MESSAGE_ON_CHANGE = 'NEW-MESSAGE-ON-CHANGE';
+
+export const actionCreate = (action) => ({ type: action.newText, newText: action.newText });
 
 export let store = {
   _state: {
@@ -143,15 +149,19 @@ export let store = {
     this._state.messagePage.tempMessage = newMessage;
     this._callSubscriber(this._state);
   },
-  // dispatch(action) {
-  //   switch (action) {
-  //     case 'ADD-MESSAGE': this.addMessage();
-  //       break;
-  //     default: console.log("add object");
-
-
-  //   }
-  // }
+  dispatch(action) {
+    switch (action.type) {
+      case ADD_POST: this.addPost();
+        break;
+      case NEW_CHANGE_POST: this.newChangePost(action.newPost);
+        break;
+      case ADD_MESSAGE: this.addMessage();
+        break;
+      case NEW_MESSAGE_ON_CHANGE: this.newMessageOnChange(action.newMessage);
+        break;
+      default: console.log("add object");
+    }
+  }
 }
 
 export default store
