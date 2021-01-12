@@ -24,15 +24,15 @@ function App(props) {
           <Route path="/home" render={() => <Home
             homePage={props.state.homePage}
             dispatch={props.dispatch}
-            addPost={props.addPost}
-            newChangePost={props.newChangePost}
+          // addPost={props.addPost}
+          // newChangePost={props.newChangePost}
           />} />
           <Route path="/explore" render={() => <Explore />} />
           <Route path="/messages" render={() => <Messages
             messagePage={props.state.messagePage}
             dispatch={props.dispatch}
-            addMessage={props.addMessage}
-            newMessageOnChange={props.newMessageOnChange}
+          // addMessage={props.addMessage}
+          // newMessageOnChange={props.newMessageOnChange}
           />} />
           <Route path="/bookmarks" render={() => <Bookmarks />} />
           <Route path="/lists" render={() => <Lists />} />

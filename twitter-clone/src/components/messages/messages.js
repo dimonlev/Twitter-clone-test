@@ -6,6 +6,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InfoIcon from '@material-ui/icons/Info';
 import { Avatar } from "@material-ui/core";
 import SendIcon from '@material-ui/icons/Send';
+import { addMessageActionCreate, newMessageOnChangeActionCreate } from "../../redux/state";
 
 const Messages = (props) => {
   let newDialogData = props.messagePage.dialog.map(dialog => <Dialog name={dialog.name} nickName={dialog.nickName} id={dialog.id} />);
@@ -14,12 +15,14 @@ const Messages = (props) => {
   let newMessageElement = React.createRef();
 
   let newMessage = () => {
-    props.addMessage()
+    props.dispatch(addMessageActionCreate())
+    // props.addMessage()
   }
 
   let addNewMesage = () => {
     let text = newMessageElement.current.value;
-    props.newMessageOnChange(text);
+    props.dispatch(newMessageOnChangeActionCreate(text))
+    // props.newMessageOnChange(text);
   }
 
   return (

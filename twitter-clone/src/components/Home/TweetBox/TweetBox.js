@@ -1,5 +1,6 @@
 import { Avatar, Button } from '@material-ui/core'
 import React from 'react'
+import { addPostActionCreate, newChangePostActionCreate } from '../../../redux/state';
 import S from "./TweetBox.module.css"
 
 function TweetBox(props) {
@@ -7,13 +8,16 @@ function TweetBox(props) {
   let newPostValue = React.createRef();
 
   let addPost = () => {
-    props.addPost();
+    props.dispatch(addPostActionCreate());
+    // props.addPost();
   }
 
   let onPostChange = () => {
     let text = newPostValue.current.value;
-    props.newChangePost(text)
+    props.dispatch(newChangePostActionCreate(text));
+    // props.newChangePost(text)
   }
+
 
   return (
     <div className={S.tweetBox}>

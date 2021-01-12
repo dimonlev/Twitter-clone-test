@@ -76,7 +76,10 @@ const NEW_CHANGE_POST = 'NEW-CHANGE-POST';
 const ADD_MESSAGE = 'ADD-MESSAGE';
 const NEW_MESSAGE_ON_CHANGE = 'NEW-MESSAGE-ON-CHANGE';
 
-export const actionCreate = (action) => ({ type: action.newText, newText: action.newText });
+export const addPostActionCreate = () => ({ type: ADD_POST });
+export const newChangePostActionCreate = (action) => ({ type: NEW_CHANGE_POST, newText: action });
+export const addMessageActionCreate = () => ({ type: ADD_MESSAGE });
+export const newMessageOnChangeActionCreate = (action) => ({ type: NEW_MESSAGE_ON_CHANGE, newText: action });
 
 export let store = {
   _state: {
@@ -153,11 +156,11 @@ export let store = {
     switch (action.type) {
       case ADD_POST: this.addPost();
         break;
-      case NEW_CHANGE_POST: this.newChangePost(action.newPost);
+      case NEW_CHANGE_POST: this.newChangePost(action.newText);
         break;
       case ADD_MESSAGE: this.addMessage();
         break;
-      case NEW_MESSAGE_ON_CHANGE: this.newMessageOnChange(action.newMessage);
+      case NEW_MESSAGE_ON_CHANGE: this.newMessageOnChange(action.newText);
         break;
       default: console.log("add object");
     }
