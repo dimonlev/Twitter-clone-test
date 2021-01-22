@@ -1,7 +1,7 @@
 import React from "react";
-import F from "./Home.module.css";
+import F from "./Home.module.scss";
 import TestFeed from "../TestFeed";
-import TweetBox from "./TweetBox/TweetBox";
+import TweetBoxContainer from "./TweetBox/TweetBoxContainer";
 import Tweet from "../Tweet/Tweet";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import Widgets from "../Widgets/Widgets";
@@ -27,7 +27,7 @@ const Home = (props) => {
           <StarBorderIcon />
         </div>
 
-        <TweetBox
+        <TweetBoxContainer
           addPost={props.addPost}
           newChangePost={props.newChangePost}
           homePage={props.homePage}

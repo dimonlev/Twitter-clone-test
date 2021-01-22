@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import s from "./SidebarOption.module.css";
+import s from "./SidebarOption.module.scss";
 
 function SidebarOption({ text, Icon, option }) {
   return (

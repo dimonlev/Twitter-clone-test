@@ -13,7 +13,7 @@
 .headerMessages {
   position: sticky;
   top: 0;
- 
+
   max-width: 100%;
   display: flex;
   border-bottom: 1px solid var(--twitter-background);
@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.headerMessages p{
+.headerMessages p {
   font-weight: 700;
   font-size: 20px;
 }
@@ -91,7 +91,7 @@
   background-color: #e8f5fe;
   border-radius: 25px;
   color: var(--twitter-color);
-  transition: color 100ms ease-out;
+  transition: color 500ms ease-out;
 }
 
 .input {

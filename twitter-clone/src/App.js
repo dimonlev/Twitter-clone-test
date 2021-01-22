@@ -1,7 +1,6 @@
-import "./App.css";
+import "./App.scss";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Home from "./components/Home/Home";
-import Messages from "./components/Messages/Messages";
 import Lists from "./components/Lists/Lists";
 import Explore from "./components/Explore/Explore";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
@@ -9,6 +8,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Notification from "./components/Notification/Notification";
 import Profile from "./components/Profile/Profile";
 import More from "./components/More/More";
+import MessagesContainer from "./components/Messages/MessagesContainer";
 
 
 function App(props) {
@@ -28,7 +28,7 @@ function App(props) {
           // newChangePost={props.newChangePost}
           />} />
           <Route path="/explore" render={() => <Explore />} />
-          <Route path="/messages" render={() => <Messages
+          <Route path="/messages" render={() => <MessagesContainer
             messagePage={props.state.messagePage}
             dispatch={props.dispatch}
           // addMessage={props.addMessage}

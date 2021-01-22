@@ -1,5 +1,5 @@
 import React from 'react'
-import S from '../Messages.module.css';
+import S from '../Messages.module.scss';
 import { NavLink } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
 

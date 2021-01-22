@@ -1,29 +1,11 @@
 import React from "react";
-import S from "./Messages.module.css";
-import Dialog from './Dialog/Dialog';
-import Message from './Message/Message';
+import S from "./Messages.module.scss";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InfoIcon from '@material-ui/icons/Info';
 import { Avatar } from "@material-ui/core";
 import SendIcon from '@material-ui/icons/Send';
-import { addMessageActionCreate, newMessageOnChangeActionCreate } from "../../redux/state";
 
 const Messages = (props) => {
-  let newDialogData = props.messagePage.dialog.map(dialog => <Dialog name={dialog.name} nickName={dialog.nickName} id={dialog.id} />);
-  let newMessageData = props.messagePage.message.map(message => <Message text={message.text} id={message.id} date={message.date} />)
-
-  let newMessageElement = React.createRef();
-
-  let newMessage = () => {
-    props.dispatch(addMessageActionCreate())
-    // props.addMessage()
-  }
-
-  let addNewMesage = () => {
-    let text = newMessageElement.current.value;
-    props.dispatch(newMessageOnChangeActionCreate(text))
-    // props.newMessageOnChange(text);
-  }
 
   return (
     <div className={S.wrapper}>
@@ -36,7 +18,7 @@ const Messages = (props) => {
           <MailOutlineIcon />
 
         </div>
-        {newDialogData}
+        {props.newDialogData}
       </div>
 
       <div className={S.messages}>
@@ -50,10 +32,14 @@ const Messages = (props) => {
           <InfoIcon />
 
         </div>
-        {newMessageData}
+        {props.newMessageData}
         <div className={S.inputBox}>
-          <input className={S.input} ref={newMessageElement} onChange={addNewMesage} value={props.messagePage.tempMessage} ></input>
-          <SendIcon className={S.send} onClick={newMessage} />
+          <input
+            className={S.input}
+            // ref={newMessageElement}
+            onChange={props.addNewMesage}
+            value={props.messagePage.tempMessage} ></input>
+          <SendIcon className={S.send} onClick={props.newMessage} />
         </div>
       </div>
     </div>

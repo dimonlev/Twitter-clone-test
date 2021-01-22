@@ -1,6 +1,6 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
-import T from "./Tweet.module.css";
+import T from "./Tweet.module.scss";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
@@ -8,7 +8,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
 
 
-function Tweet( 
+function Tweet(
   // userName, 
   // nickName, 
   // verified, 
@@ -16,7 +16,7 @@ function Tweet(
   // image, 
   // text
   props
-  ) {
+) {
   return (
     <div className={T.container}>
       <div className={T.avatar}>
@@ -29,19 +29,19 @@ function Tweet(
 
       <div className={T.content}>
         <div className={T.header}>
-        
+
           <div className={T.userName}>
             {props.userName}
           </div>
 
           <div className={T.verified}>
-            <VerifiedUserIcon  fontSize="small" />
+            <VerifiedUserIcon fontSize="small" />
           </div>
-            
+
           <div className={T.nickName}>
             {props.nickName}
           </div>
-          
+
         </div>
 
         <div className={T.message}>
@@ -72,7 +72,7 @@ function Tweet(
         </div>
 
       </div>
-      
+
     </div>
   );
 }
